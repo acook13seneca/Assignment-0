@@ -1,9 +1,13 @@
 README FILE
 
-The following R file proves there is a way to complete the last todo of the tutorial without a for loop. 
+The following R file (main.R)  proves there is a way to complete the last todo of the tutorial without a for loop. 
 
 The ifelse syntax allows you to look at each element in a list, and apply a logical test to them in order to change their value if it matches or does not match.
 
 The outer ifelse looks for x < 5, and if it finds it will multiply the number by 5. If it fails to find it, it will send it to the inner ifelse.
 
 The inner ifelse looks for x > 90, and if it finds it will multiply the number by 10, and multiply it by 0.1 if it fails to find it.
+
+-----------------------------------------
+
+Additionally, there is a full report of all ToDos and their outputs named SRT411 Assignment 0, and a rough copy of all code in the report Assignment 0. Finally the included Rmd file that created the report is included as rstuff.Rmd

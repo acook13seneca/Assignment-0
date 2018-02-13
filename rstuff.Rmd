@@ -1,0 +1,138 @@
+---
+title: "Assignment 0"
+author: "Adam Cook"
+date: "February 13, 2018"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Assignment 0
+
+This assignment is to finish the 14 todos in "A (very) short introduction to R" by Paul Torfs & Claudia Brauer, which can be found here https://cran.r-project.org/doc/contrib/Torfs+Brauer-Short-R-Intro.pdf
+
+The main resource I used was the document itself, as well as the turorials at https://www.tutorialspoint.com/r/
+
+Other resources used to assemble this report and create the repository are below:
+https://nicercode.github.io/guides/reports/
+
+
+http://kbroman.org/knitr_knutshell/pages/Rmarkdown.html
+
+https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf
+
+Finally, a link to my repositary where all files are stored is here:
+https://github.com/acook13seneca/Assignment-0
+
+#Todo 1
+```{r code1}
+((2018 - 2016) / (2018 - 1997)) * 100
+```
+
+#Todo 2
+```{r code2}
+school <- 2018 - 2016
+born <- 2018 - 1997
+(school / born) * 100
+```
+
+#Todo 3
+```{r code3}
+func1 <- c(4,5,8,11)
+sum(func1)
+```
+
+#Todo 4
+```{r code4}
+plot1 <- rnorm(100)
+plot(plot1)
+```
+
+#Todo 5
+```{r code5}
+help.search("sqrt")
+```
+
+#Todo 6
+```{r code6}
+plot1 <- rnorm(100)
+plot(plot1)
+```
+
+#Todo 7
+```{r code7}
+P <- seq(from=31,to=60, by=1)
+Q <- matrix(data=seq(from=31, to=60, by=1), ncol=5)
+```
+
+#Todo 8
+```{r code8}
+y1 <- rnorm(100,0, 100)
+y2 <- runif(100, min=0, max=100)
+y3 <- runif(100, min=0, max=100)
+t <- data.frame(x = c(y1), y = c(y1 + y2), z = c(y1 + y2 + y3))
+plot(t)
+```
+
+#Todo 9
+1 plots the first column in a coloured plot, #2 plots column 2 in a similar way with different colours, and #3 plots column 3 with 
+
+#Todo 10
+```{r code10}
+d1 <- read.table(file="tst1.txt", header=TRUE)
+new <- (d1 * 5)
+write.table(new, file="tst2.txt", row.names=FALSE)
+```
+
+#Todo 11
+```{r code11}
+x1 <- runif(100, min=0, max=100)
+value <- (sqrt(mean(x1)))
+value <- c(sqrt(x1))
+mean(value)
+```
+
+#Todo 12
+```{r code12}
+dates <- strptime(c("20180202", "20171225", "20180922"), format="%Y%m%d")
+pres <- c(0, 4, 4)
+m <- list(c(dates), c(pres))
+mat <- matrix( unlist(m), nrow=length(m))
+plot(mat)
+```
+
+#Todo 13
+```{r code13}
+vect <- seq(from=1, to=100, by=1)
+for(i in vect) {
+  if((i < 5) && (i > 90)){
+    print(i * 5)
+  } else {
+    print(i * 0.1)
+  }}
+```
+
+#Todo 14
+```{r code14}
+fun1 = function(arg1) {
+  vect <- arg1
+  for(i in vect) {
+    if((i < 5) && (i > 90)){
+      print(i * 5)
+    } else {
+      print(i * 0.1)
+    }
+  }
+}
+```
+
+#Bonus Todo, without a loop!
+```{r code15}
+x <- seq(1, 100, by=1)
+x <- ifelse(x < 5, x*5, ifelse(x>90, x*10, x*0.1))
+print(x)
+```
